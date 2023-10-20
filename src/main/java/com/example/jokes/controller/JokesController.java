@@ -35,7 +35,7 @@ public class JokesController {
 
     @ExceptionHandler(JokesCountRangeException.class)
     public ResponseEntity<String> handleJokesCountRangeException() {
-        return ResponseEntity.internalServerError().body("За один раз можно получить от 1 до 100 штук.");
+        return ResponseEntity.badRequest().body("За один раз можно получить от 1 до 100 штук.");
     }
 
 }
